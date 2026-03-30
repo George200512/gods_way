@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A retail grocery shop that provides good customer services with affordable prices">
+	<meta name="revised" content="3/25/2026">
+	<meta name="keywords" content="Ghanaian local store, good customer services, neighbourhood grocery shop kasoa, ">
+	<title>God's Way</title>
+	<link rel="stylesheet" type="text/css" href="styles/all.min.css">
+	<link rel="icon/x-image" href="images/favicon/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/vue.global.prod.js"></script>
+</head>
+<body>
+<header>
+	<a href="index.html" class='home-link'><img src="images/gods_way_logo.jpg" class="logo"></a>
+</header>
+
+<main>
+	<section class="section-1">
+		<div class="div-1">
+			<h1 class="s1-h1">Akwaaba,</h1>
+			<p class="s1-p">One stop retail shop for your snacks, foodstuff and grocceries.</p>
+			<a href="tele:+233548824293" class="mobile-cta-btn"><span class="fa-solid fa-phone"></span> Give Us A Phone Call</a> <br>
+			<a href="https://wa.me/+233548824293" class="desktop-cta-btn"><span class="fa-brands fa-whatsapp"></span> Send Us A Message</a>
+		</div>
+
+		<img src="images/building_1.jpg" class="s1-img">
+	</section>
+
+	<section class="section-2">
+		<div class="s2-div1">
+			<h2>Produts</h2>
+			<p>These are just few examples of products we have in stock.</p>
+			<div class="prod-btns">
+				<button class="prod-btn" @click='active_product="food"'>Food</button>
+				<button class="prod-btn" @click='active_product="drink"'>Drink</button>
+				<button class="prod-btn" @click='active_product="others"'>Others</button>
+			</div>
+		</div>
+	</section>
+</main>
+</body>
+</html>
