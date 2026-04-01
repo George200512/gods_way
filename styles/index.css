@@ -29,7 +29,7 @@ header{
 	position: fixed;
 	left: 1rem;
 	right: 1rem;
-	transform: translateY(-120%);
+	transform: translateY(-130%);
 	transition: transform 0.5s linear;
 	display: flex;
 	flex-direction: row;
@@ -45,7 +45,7 @@ header{
 
 .logo{
 	width: 5rem;
-	height: 3.5rem;
+	height: auto;
 	border-radius: 0.7rem;
 }
 
@@ -53,7 +53,7 @@ main{
 	margin-top: 7rem;
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 2rem;
 }
 
 .section-1{
@@ -86,7 +86,8 @@ main{
 
 .s1-h1{
 	transform: translateX(2.5rem);
-	transition: transform 0.6s linear;
+	opacity: 0;
+	transition: transform 0.6s linear, opacity 0.6s linear;
 	font-size: 2rem;
 	color: var(--primary-color);
 	background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
@@ -98,7 +99,8 @@ main{
 	text-align: center;
 	line-height: 1.6;
 	transform: translateX(-2.5rem);
-	transition: transform 0.6s linear;
+	opacity: 0;
+	transition: transform 0.6s linear, opacity 0.6rem linear;
 }
 
 .cta-buttons{
@@ -126,14 +128,17 @@ main{
 }
 
 .amponsah_pic, .shop_pic{
-	width: 100%;
 	border-radius: 1rem;
 	filter: brightness(0.6);
-	transition: filter 0.6s linear;
+	transition: filter 0.4s linear;
 }
 
 .amponsah_pic:hover, .shop_pic:hover{
 	filter: brightness(1);
+}
+
+.amponsah_pic, .shop_pic{
+	width: 16rem;
 }
 
 .section-2{
@@ -149,6 +154,9 @@ main{
 	flex-direction: column;
 	gap: 1.5rem;
 	text-align: center;
+	opacity: 0;
+	transform: translateY(2rem);
+	transition: opacity 0.6s linear, transform 0.6s linear;
 }
 
 .prod-btns{
@@ -169,7 +177,7 @@ main{
 	transition: background 0.4s linear;
 }
 
-.prod-btn:active{
+.prod-btn:hover, .prod-btn:active{
 	background: var(--secondary-color);
 }
 
@@ -183,6 +191,9 @@ main{
 	padding: 1rem;
 	border-radius: 1rem;
 	margin: auto 1rem;
+	transform: translateY(1.5rem);
+	opacity: 0;
+	transition: transform 0.6s linear, opacity 0.6s linear;
 }
 
 .telecomImageContainer{
@@ -190,8 +201,7 @@ main{
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
-	transition: gap 0.6s linear;
+	gap: 1.2rem;
 }
 
 .telecomImage{
@@ -219,7 +229,8 @@ main{
 	justify-content: center;
 	gap: 1rem;
 	transform: translateY(2rem);
-	transition: transform 0.6s linear;
+	opacity: 0;
+	transition: transform 0.6s linear, opacity 0.6s linear;
 }
 
 .description{
@@ -256,6 +267,7 @@ footer{
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	padding-top: 1rem;
 }
 
 .div{
@@ -271,4 +283,58 @@ footer{
 	flex-direction: column;
 	align-items: center;
 	gap: 0.7rem;
+}
+
+.more-text{
+	display: none;
+}
+
+.more-btn{
+	font-weight: bold;
+}
+
+.div h2{
+	color: var(--secondary-color);
+}
+
+.links:link, .links:visited{
+	color: white;
+	text-decoration: none;
+	transition: font-size 0.6s linear, color 0.6s linear;
+}
+
+
+.links:hover, .links:active{
+	color: var(--secondary-color);
+	font-size: 1.4rem;
+}
+
+@media screen and (min-width: 922px){
+	.section-1{
+		flex-direction: row;
+	}
+
+	.mobile-cta-btn{
+		display: none;
+	}
+
+	.desktop-cta-btn{
+		display: block;
+		background: var(--primary-color);
+		padding: 0.9rem 0.7rem;
+		border-radius: 1rem;
+		color: white;
+		text-decoration: none;
+	}
+
+	.desktop-cta-btn:active, .desktop-cta-btn:hover{
+		border-style: outset;
+	}
+
+	.section-4{
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: center;
+	}
+
 }
