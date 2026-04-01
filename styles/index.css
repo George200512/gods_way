@@ -1,7 +1,7 @@
 @font-face{
-	src: url("../webfonts/static/UbuntuSans_SemiCondensed-Medium.tff")
+	src: url("../webfonts/UbuntuSans_SemiCondensed-Regular.ttf")
 	format("truetype");
-	font-family: Ubuntu-Sans, sans-serif;
+	font-family: Ubuntu-Sans;
 }
 
 *{
@@ -11,7 +11,7 @@
 }
 
 :root{
-	--font-family: Ubuntu-Sans;
+	--font-family: Ubuntu-Sans, san-serif;
 	--font-size: 1.2rem;
 	--primary-color: rgba(255, 0, 0,1);
 	--secondary-color: rgba(255, 200, 0, 1);
@@ -29,7 +29,8 @@ header{
 	position: fixed;
 	left: 1rem;
 	right: 1rem;
-	top: 1.2rem;
+	transform: translateY(-120%);
+	transition: transform 0.5s linear;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -50,6 +51,9 @@ header{
 
 main{
 	margin-top: 7rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
 
 .section-1{
@@ -75,12 +79,21 @@ main{
 .s1-img{
 	width: 20rem;
 	border-radius: 0.8rem;
+	transform: rotate(180deg);
+	transition: transform 0.6s linear, opacity 0.6s linear;
+	opacity: 0;
 }
 
 .s1-h1{
-	background: linear-gradient(var(--primary-color), var(--secondary-color));
-	--webkik-background-clip: text;
-	--webkit-text-fill-color: transparent;
-	transform: translateX(1rem);
+	transform: translateX(2.5rem);
+	transition: transform 0.6s linear;
+	font-size: 2rem;
+	color: var(--primary-color);
+}
+
+.s1-p{
+	text-align: center;
+	line-height: 1.6;
+	transform: translateX(-2.5rem);
 	transition: transform 0.6s linear;
 }
