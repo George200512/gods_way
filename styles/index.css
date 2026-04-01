@@ -1,0 +1,19 @@
+@font-face{
+	src: url("../webfonts/static/UbuntuSans_SemiCondensed-Medium.tff")
+	format("truetype");
+	font-family: Ubuntu-Sans;
+}
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+:root{
+	--font-family: Ubuntu-Sans;
+	--font-size: 1.2rem;
+	--primary-color: rgba(255, 0, 0,1);
+	--secondary-color: rgba(255, 200, 0, 1);
+	--accent-color: rgba(255, 255, 224, 1);
+}

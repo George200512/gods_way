@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="A retail grocery shop that provides good customer services with affordable prices">
+	<meta name="author" description="George Ofori">
+	<meta name="author" description="https://george-ofori.vercel.app">
 	<meta name="revised" content="3/25/2026">
 	<meta name="keywords" content="Ghanaian local store, good customer services, neighbourhood grocery shop kasoa, ">
 	<title>God's Way</title>
@@ -30,7 +32,7 @@
 		<img src="images/building_1.jpg" class="s1-img">
 	</section>
 
-	<section class="section-2">
+	<section class="section-2" id="app">
 		<div class="s2-div1">
 			<h2>Produts</h2>
 			<p>These are just few examples of products we have in stock.</p>
@@ -40,7 +42,46 @@
 				<button class="prod-btn" @click='active_product="others"'>Others</button>
 			</div>
 		</div>
+	<transition appear>
+		<component :is="active_product"></component>
+	</transition>
 	</section>
+	<section class="section-3"></section>
+	<section class="section-4">
+		<div class="s4-div">
+			<img src="images/IMG_20240317_081914_135_transcpr.jpg" alt="picture of owner of shop" class="amponsah_pic">
+			<p class="description">I am elizabeth Amponsah. I opened this shop to provide my customers with quality and affordable foodstuffs, snacks and other products tht are needed to make life of my customers better without going far away. I like to see my customers happy by providing them what they need at affordable prices.
+			</p>
+		</div>
+
+		<div class="s4-div">
+			<img src="images/building_2.jpg" alt="picture of shop" class="shop_pic">
+			<p class="description">God's way shop has been in existence over 20 years. It has served many people in our neighbourhood and around with quality products at affordable prices. We are commited to serving our customers with the best customer services.Our vision is to be a well known retail grocery shop natiowide.
+			</p>
+		</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="footer">
+			<div class="div">
+				<h2>Contact Information</h2>
+				<ul class="information">
+					<li class="info"><span class="fa-solid fa-phone"></span> <a href="tele:+233548824293" class="links">+233 548 824 293</a></li>
+					<li class="info"><span class="fa-solid fa-envelope"></span> <a href="#" class="links"><!--Insert email address here--></a></li>
+					<li class="info"><!--Insert a map showing the location of the shop--></li>
+				</ul>
+			</div>
+
+			<div class="div">
+				<h2>Social Contacts</h2>
+				<!--I'm not done with this part yet-->
+			</div>
+		</div>
+		<p class="copyright">&copy; 2026</p>
+
+	</footer>
 </main>
 </body>
 </html>
