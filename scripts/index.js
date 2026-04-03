@@ -1,7 +1,7 @@
 $(document).ready(function (event) {
 	$('header').css('transform', 'translateY(-110%)');
 	$('.s1-img').css({
-		'transform': 'rotate(0deg)',
+		transform: 'rotate(0deg)',
 		opacity: '1'
 	});
 	$('.s1-h1').css({
@@ -41,6 +41,20 @@ $(document).ready(function (event) {
 		s2Div1Observer.observe(ele);
 	});
 
-	const app = Vue.
+	/*const app = Vue.createApp({
+		data() {
+			return {
+				active_product: "food"
+			}
+		},
+		methods: {
+			showExcess(ele) {
+				const parentElement = ele.parentElement;
+				parentElement.children[0].display, parentElement.children[1].display = "none";
+				parentElement.children[2].display = "none";
+			},
+		}
+	});
+	app.mount("#app");*/
 
 });
