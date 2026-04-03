@@ -56,25 +56,43 @@ const Product = {
 	props: ["items"],
 	template: `
 		<div class="prod-cont">
-		<div class="items" v-for='item in items' :key="item">
-		<img src="item.path" class="item-pic" alt="item.alt"/>
-		<p class="label">{{item.name}]</p>
+		<div class="items" v-for='item in items' :key="item.name">
+		<img :src="item.path" class="item-pic" :alt="item.alt"/>
+		<p class="label">{{item.name}}</p>
 		</div>
 		</div>
 		`
 }
 
-const Food = {
-	template: `<product items="foodProduct" />`,
+window.Food = {
+	data () {
+		return{
+			foodProduct
+		}
+	},
+	components: {Product},
+	template: `<Product :items="foodProduct" />`,
 	name: "food"
 }
 
-const Drink = {
-	template: `<product items="drinkProduct" />`,
+window.Drink = {
+	data () {
+		return{
+			drinkProduct
+		}
+	},
+	components: {Product},
+	template: `<Product :items="drinkProduct" />`,
 	name: "drink"
 }
 
-const Others = {
-	template: `<product items="otherProduct" />`,
+window.Others = {
+	data (){
+		return {
+			otherProduct
+		}
+	},
+	components:  {Product},
+	template: `<Product :items="otherProduct" />`,
 	name: "others"
 }
