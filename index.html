@@ -19,6 +19,7 @@
 	<script src="scripts/jquery.min.js"></script>
 	<script src="scripts/vue.global.prod.js"></script>
 	<script src="scripts/index.js" defer></script>
+	<script src="scripts/components.js"></script>
 </head>
 <body>
 <header>
@@ -51,7 +52,9 @@
 			</div>
 		</div>
 	<transition appear>
+		<keepalive>
 		<component :is="active_product"></component>
+	</keepalive>
 	</transition>
 	</section>
 	<section class="section-3">
@@ -65,16 +68,14 @@
 	<section class="section-4">
 		<div class="s4-div">
 			<img src="images/IMG_20240317_081914_135_transcpr.jpg" alt="picture of owner of shop" class="amponsah_pic">
-			<p class="description">I am elizabeth Amponsah. I opened this shop to provide my customers with quality and affordable foodstuffs, snacks and<span class="excess-container"><span class="etc">...</span> <span class="more-btn" @click='showExcess(this)'>Read more</span> <span class="more-text">other products tht are needed to make life of my customers better without going far away. I like to see my customers happy by providing them what they need at affordable prices.</span></span>
+			<p class="description">I am elizabeth Amponsah. I opened this shop to provide my customers with quality and affordable foodstuffs, snacks and<span class="excess-container"><span class="etc">...</span> <span class="more-btn" @click='showExcess($this)'>Read more</span> <span class="more-text">other products tht are needed to make life of my customers better without going far away. I like to see my customers happy by providing them what they need at affordable prices.</span></span>
 			</p>
 		</div>
 
 		<div class="s4-div">
 			<img src="images/building_2.jpg" alt="picture of shop" class="shop_pic">
-			<p class="description">God's way shop has been in existence over 20 years. It has served many people in our neighbourhood and around with quality<span class="excess-container"> <span class='etc'>...</span> <span class="more-btn" @click='showExcess(this)'>Read more</span> <span class="more-text"> products at affordable prices. We are commited to serving our customers with the best customer services.Our vision is to be a well known retail grocery shop natiowide.</span></span>
+			<p class="description">God's way shop has been in existence over 20 years. It has served many people in our neighbourhood and around with quality<span class="excess-container"> <span class='etc'>...</span> <span class="more-btn" @click='showExcess($this)'>Read more</span> <span class="more-text"> products at affordable prices. We are commited to serving our customers with the best customer services.Our vision is to be a well known retail grocery shop natiowide.</span></span>
 			</p>
-		</div>
-
 		</div>
 	</section>
 	<div class="nav-btn" @click="scrollUp()"><span class="fa-solid fa-arrow-up"></span></div>

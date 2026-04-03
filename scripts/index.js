@@ -41,7 +41,10 @@ $(document).ready(function (event) {
 		s2Div1Observer.observe(ele);
 	});
 
-	/*const app = Vue.createApp({
+	
+});
+
+const app = Vue.createApp({
 		data() {
 			return {
 				active_product: "food"
@@ -49,12 +52,19 @@ $(document).ready(function (event) {
 		},
 		methods: {
 			showExcess(ele) {
-				const parentElement = ele.parentElement;
-				parentElement.children[0].display, parentElement.children[1].display = "none";
-				parentElement.children[2].display = "none";
+				//const parentElement = ele.parentElement;
+				console.log(ele.parentElement);
+				//parentElement.children[0].display, parentElement.children[1].display = "none";
+				//parentElement.children[2].display = "none";
 			},
-		}
-	});
-	app.mount("#app");*/
+			scrollUp() {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth"
+				});
+			},
 
-});
+		},
+		components: {Food, Drink, Others}
+	});
+	app.mount("#app");
