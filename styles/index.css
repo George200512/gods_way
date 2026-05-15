@@ -16,6 +16,7 @@
 	--primary-color: rgba(255, 0, 0,1);
 	--secondary-color: rgba(255, 165, 0, 1);
 	--accent-color: rgba(255, 255, 0, 1);
+	--transition-duration: 0.4s;
 }
 
 body{
@@ -30,12 +31,12 @@ header{
 	left: 1rem;
 	right: 1rem;
 	transform: translateY(-130%);
-	transition: transform 0.5s linear;
+	transition: transform var(--transition-duration) linear;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	border-radius: 1rem;
-	box-shadow: 0.1rem 0.1rem 0.2rem white;
+	box-shadow: 0.1rem 0.2rem 0.3rem white;
 	background: black;
 	align-items: center;
 	padding: 0.8rem 1rem;
@@ -57,7 +58,7 @@ main{
 }
 
 .section-1{
-	margin: auto 1.5rem;
+	margin: auto 1rem;
 	display: flex;
 	flex-direction:column;
 	justify-content: center;
@@ -77,17 +78,17 @@ main{
 }
 
 .s1-img{
-	width: 20rem;
+	width: 17rem;
 	border-radius: 0.8rem;
 	transform: rotate(180deg);
-	transition: transform 0.6s linear, opacity 0.6s linear;
+	transition: transform var(--transition-duration) linear, opacity 0.6s linear;
 	opacity: 0;
 }
 
 .s1-h1{
 	transform: translateX(2.5rem);
 	opacity: 0;
-	transition: transform 0.6s linear, opacity 0.6s linear;
+	transition: transform var(--transition-duration) linear, opacity var(--transition-duration) linear;
 	font-size: 2rem;
 	color: var(--primary-color);
 	background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
@@ -100,13 +101,12 @@ main{
 	line-height: 1.6;
 	transform: translateX(-2.5rem);
 	opacity: 0;
-	transition: transform 0.6s linear, opacity 0.6rem linear;
+	transition: transform var(--transition-duration) linear, opacity var(--transition-duration) linear;
 }
 
 .cta-buttons{
 	display: flex;
 	flex-direction: column;
-	gap: 1.2rem;
 	justify-content: center;
 	align-items: center;
 }
@@ -117,10 +117,11 @@ main{
 	border-radius: 1rem;
 	color: white;
 	text-decoration: none;
+	transition: font-size var(--transition-duration) linear;
 }
 
-.mobile-cta-btn:active, .mobile-cta-btn:hover{
-	border-style: outset;
+.mobile-cta-btn:hover, .mobile-cta-btn:active{
+	   font-size: 1rem;
 }
 
 .desktop-cta-btn{
@@ -130,7 +131,7 @@ main{
 .amponsah_pic, .shop_pic{
 	border-radius: 1rem;
 	filter: brightness(0.6);
-	transition: filter 0.4s linear;
+	transition: filter var(--transition-duration) linear;
 }
 
 .amponsah_pic:hover, .shop_pic:hover{
@@ -147,7 +148,7 @@ main{
 	align-items: center;
 	gap: 2rem;
 	justify-content: center;
-	margin: 1.5rem auto;
+	margin: 2rem auto;
 }
 
 .s2-div1{
@@ -157,7 +158,7 @@ main{
 	text-align: center;
 	opacity: 0;
 	transform: translateY(2rem);
-	transition: opacity 0.6s linear, transform 0.6s linear;
+	transition: opacity var(--transition-duration) linear, transform var(--transition-duration) linear;
 }
 
 .prod-btns{
@@ -166,6 +167,7 @@ main{
 	gap: 1.2rem;
 	justify-content: center;
 	align-items: center;
+	font-size: 1rem;
 }
 
 .prod-btn{
@@ -175,11 +177,45 @@ main{
 	border-radius: 1rem;
 	padding: 1rem 0.9rem;
 	font-size: var(--font-size);
-	transition: background 0.4s linear;
+	transition: background var(--transition-duration) linear;
 }
 
 .prod-btn:hover, .prod-btn:active{
 	background: var(--secondary-color);
+}
+
+
+.prod-cont{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.8rem;
+}
+
+.items{
+	direction: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.7rem;
+	border: 0.1rem solid white;
+	border-radius: 1rem;
+	padding: 2rem;
+	transition: box-shadow var(--transition-duration) linear;
+}
+
+.items:hover{
+	box-shadow: 0.2rem 0.4rem 0.6rem rgba(255, 255, 255, 0.5)
+}
+
+.item-pic{
+	width: 14rem;
+	height: auto;
+	border-radius: 0.9rem;
+}
+
+.label{
+	font-weight: bold;
 }
 
 .section-3{
