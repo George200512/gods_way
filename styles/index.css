@@ -83,13 +83,14 @@ main{
 	transform: rotate(180deg);
 	transition: transform var(--transition-duration) linear, opacity 0.6s linear;
 	opacity: 0;
+	min-width: 7rem;
 }
 
 .s1-h1{
 	transform: translateX(2.5rem);
 	opacity: 0;
 	transition: transform var(--transition-duration) linear, opacity var(--transition-duration) linear;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	color: var(--primary-color);
 	background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
 	-webkit-text-fill-color: transparent;
@@ -140,6 +141,7 @@ main{
 
 .amponsah_pic, .shop_pic{
 	width: 16rem;
+	min-width: 7.5rem;
 }
 
 .section-2{
@@ -201,7 +203,8 @@ main{
 	border: 0.1rem solid white;
 	border-radius: 1rem;
 	padding: 2rem;
-	transition: box-shadow var(--transition-duration) linear;
+	transition: box-shadow var(--transition-duration) linear, opacity var(--transition-duration) linear;
+	opacity: 0;
 }
 
 .items:hover{
@@ -235,16 +238,17 @@ main{
 
 .telecomImageContainer{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 1.2rem;
 }
 
 .telecomImage{
-	width: 6rem;
+	width: 7.8rem;
 	border-radius: 50%;
-	height: 6rem;
+	height: 7.8rem;
+	min-width: 3.8rem;
 }
 
 .section-4{

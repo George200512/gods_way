@@ -41,7 +41,7 @@ const otherProduct = [
 		alt: "image of a bottle of bag of water"
 	},
 	{
-		path: "images/mosquito_spray.jpg",
+		path: "images/download.webp",
 		name: "Insecticide Spray",
 		alt: "image of an insecticide spray"
 	},
@@ -56,12 +56,31 @@ const Product = {
 	props: ["items"],
 	template: `
 		<div class="prod-cont">
-		<div class="items" v-for='item in items' :key="item.name">
+		<div class="items" v-for='item in items' :key="item.name" ref="items">
 		<img :src="item.path" class="item-pic" :alt="item.alt"/>
 		<p class="label">{{item.name}}</p>
 		</div>
 		</div>
-		`
+		`,
+	mounted() {
+		const Observer = new IntersectionObserver(
+		function (entries) {
+			entries.forEach(e=>{
+				if (e.isIntersecting){
+					e.target.style.opacity = '1';
+					Observer.unobserve(e.target);
+				}
+			});
+		},
+		{
+		threshold: 0.2
+		} 
+		);
+		this.$refs.items.forEach((ele) => {
+			Observer.observe(ele);
+		});
+	
+	}
 }
 
 window.Food = {
