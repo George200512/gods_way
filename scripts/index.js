@@ -1,5 +1,5 @@
 $(document).ready(function (event) {
-	$('header').css('transform', 'translateY(-140%)');
+	$('header').css('transform', 'translateY(-136%)');
 	$('.s1-img').css({
 		transform: 'rotate(0deg)',
 		opacity: '1'
@@ -53,10 +53,10 @@ const app = Vue.createApp({
 		},
 		methods: {
 			showExcess(ele) {
-				//const parentElement = ele.parentElement;
-				console.log(ele.parentElement);
-				//parentElement.children[0].display, parentElement.children[1].display = "none";
-				//parentElement.children[2].display = "none";
+				const parentElement = ele.parentElement;
+				parentElement.children[0].style.display = "none";
+				parentElement.children[1].style.display = "none";
+				parentElement.children[2].style.display = "inline";
 			},
 			scrollUp() {
 				window.scrollTo({
